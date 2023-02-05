@@ -1,0 +1,31 @@
+nav {
+    justify-content: left;
+    background-color: lightblue;
+    top: 0%;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+
+    margin: 0 10px;
+}
+
+#logo {
+    justify-content: left;
+    border-radius: 10px;
+    height: 50px;
+}
+
+#okr {
+    align-items: center;
+    position: absolute;
+    left: 50%;
+}
