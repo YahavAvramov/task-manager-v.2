@@ -6,7 +6,7 @@ import User from '../Models/User';
 // this is the url that the json server is run on
 // if the server is not run - use the CLI to run this command : "npm run startServer"
 const TaskServerURL = "http://localhost:4100/Tasks/";
-const UsersServerUrl ="http://localhost:4100/Users/";
+const UsersServerUrl ="http://localhost:4000/Users/";
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +15,7 @@ export class WebService {
   constructor(private http:HttpClient ) { }
   //get All task in the DB
   getAllTasks(){
-    return this.http.get(TaskServerURL);
+   return this.http.get(TaskServerURL);
 }
 // get Task by its id
 getTaskById(id:number){
@@ -34,7 +34,7 @@ putTask(task: MyTask) {
 
 //remove Task from the DB
 deleteTask(id:number){
-    return this.http.delete(TaskServerURL + id);
+    return this.http.delete(TaskServerURL +id);
 }
 
 //*************************************************

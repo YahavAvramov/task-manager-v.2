@@ -2,7 +2,8 @@
     <!-- the select Department element -->
     <div [ngClass]="'selctDiv'">
         <p [ngClass]="'inputTag'">Department</p>
-        <select [ngClass]="'departmentSelection'">
+        <select [ngClass]="'departmentSelection'" (change)="onSelectPrivacy($event)" #selectValue>
+            <option value="all">All</option>
             <option *ngFor="let department of departmentValues">{{department}}</option>
         </select>
     </div>
@@ -11,8 +12,10 @@
 
 
     <div [ngClass]="'selctDiv'">
-        <p [ngClass]="'inputTag'">Start Time:</p>
-        <input type="date" class="MyDatePicker">
+        <p [ngClass]="'inputTag'">From Date:</p>
+        <input type="date" class="MyDatePicker" (change)="filterByDate(selectedDate)" #selectedDate>
+        <p [ngClass]="'inputTag'">To Date:</p>
+        <input type="date" class="MyDatePicker" (change)="filterByFinishDate(finishDate)" #finishDate>
     </div>
 
     <div>
@@ -20,50 +23,11 @@
         <a (click)="coverAction()" [ngClass]="'addObjective'">Add objective<img src="..\assets\plus.png"
                 id="plusIcon" /></a>
     </div>
-    <img id="homeImage" src="..\assets\homeImg.png" />
-
-    <div *ngFor="let u of users">
-        <h1>{{u.userName}}</h1>
-    </div>
+    <img *ngIf="!allTasks" id="homeImage" src="..\assets\homeImg.png" />
 </nav>
 
-
+<app-tasks-show [allTasks]="filterTasks"></app-tasks-show>
 
 <div *ngIf="showCover" id="cover-window">
-    <div id="content">
-        <form>
-            <h1 class="hadderPopUp">New Task</h1>
-            <input id="type-here" type="text" placeholder="Type here">
-            <br><br>
-            <select>
-                <option value="">Select an option</option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
-            <br><br>
-            <div class="dropdown">
-             
-               <p>User :</p> <button class="dropdown-btn">{{selectedUser? selectedUser.userName: "Select an option"}}</button>
-                <div class="dropdown-content">
-                  <a *ngFor="let user of users" [id]="user.id" (click)="setSelectedUser(user)"> 
-                    {{user.userName}} <img class="imagIcon" [src]="user.userImgUrl"/>
-                </a>
-                </div>
-              </div>
-            <br><br>
-            <select>
-                <option value="">Select an option</option>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
-            <br><br>
-            <div class="ButtonSection">
-                <button type="button" (click)="coverAction()" >Cancel</button>
-                <button type="submit">Submit</button>
-            </div>
-
-        </form>
-    </div>
+   <app-make-new-task [selectedUser]="selectedUser" [users]="users" (unshowPopUp)="coverAction()"  (setSelectedUser)="setSelectedUser($event)" (submitFormEvent)="SubmitForm($event)"></app-make-new-task>
 </div>

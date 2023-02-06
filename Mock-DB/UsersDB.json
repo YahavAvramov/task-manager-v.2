@@ -1,0 +1,39 @@
+{
+    "Users": [
+    {
+      "id": 0,
+      "userName": "Moshe Vayner",
+      "userImgUrl": "../assets/employees/Mosh.jpg"
+    },
+    {
+      "id": 1,
+      "userName": "Almarie",
+      "userImgUrl": "../assets/employees/Almarie.jpg"
+    },
+    {
+      "id": 2,
+      "userName": "Ariel",
+      "userImgUrl": "../assets/employees/Ariel.jpg"
+    },
+    {
+      "id": 3,
+      "userName": "Cody",
+      "userImgUrl": "../assets/employees/Cody.jpg"
+    },
+    {
+      "id": 4,
+      "userName": "Itay",
+      "userImgUrl": "../assets/employees/Itay.jpg"
+    },
+    {
+      "id": 5,
+      "userName": "Mali",
+      "userImgUrl": "../assets/employees/Mali.jpg"
+    },
+    {
+      "id": 4,
+      "userName": "Wai",
+      "userImgUrl": "../assets/employees/Wai.jpg"
+    }
+  ]
+}

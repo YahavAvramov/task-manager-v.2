@@ -1,1 +1,34 @@
-<p>make-new-task works!</p>
+<div id="content">
+    <form>
+        <p *ngIf="selectedUser">{{selectedUser.userName}} <img class="imagIcon" [src]="selectedUser.userImgUrl"/> </p> 
+        <h1 class="hadderPopUp">New Task</h1>
+        <input id="type-here" type="text" placeholder="Type here" (change)="changeTaskText(taskValue.value)" #taskValue>
+        <br><br>
+      <p>Start: <input type="date" class="MyDatePicker" (change)="chandeDate(startDate.value, true)" #startDate></p>  
+      <p>End: <input type="date" class="MyDatePicker" (change)="chandeDate(endDate.value , false)" #endDate></p>  
+        <br><br>
+        <div class="dropdown">
+         
+           <button class="dropdown-btn">{{selectedUser? selectedUser.userName: "Select an option"  }}</button>
+            <div class="dropdown-content">
+              <a *ngFor="let user of users" [id]="user.id" (click)="activeSetUser(user)"> 
+                {{user.userName}} <img class="imagIcon" [src]="user.userImgUrl"/>
+            </a>
+            </div>
+          </div>
+        <br><br>
+        <select (change)="onPrivacySelect($event)">
+            <option >Select an option</option>
+            <option value="Department">Department</option>
+            <option value="Only direct management">Only direct management</option>
+            <option value="Entire company">Entire company</option>
+            <option value="Personal">Personal</option>
+        </select>
+        <br><br>
+        <div class="ButtonSection">
+            <button type="button" (click)="coverAction()" >Cancel</button>
+            <button type="submit" (click)="submitForm()">Submit</button>
+        </div>
+
+    </form>
+</div>

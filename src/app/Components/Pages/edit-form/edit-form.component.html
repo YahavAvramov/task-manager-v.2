@@ -1,0 +1,35 @@
+
+<div id="content">
+    <form>
+        <p *ngIf="task.userPost">{{task.userPost.userName}} <img class="imagIcon" [src]="task.userPost.userImgUrl"/> </p> 
+        <h1 class="hadderPopUp">New Task</h1>
+        <input id="type-here" type="text" placeholder="Type here" [value]="task.textValue"  (change)="changeTaskText(taskValue.value)" #taskValue>
+        <br><br>
+        <p>Start: <input type="date" [value]="task.startDate" class="MyDatePicker" (change)="changeDate(startDate.value, true)" #startDate></p>  
+        <p>End: <input type="date" [value]="task.finishDate" class="MyDatePicker" (change)="changeDate(endDate.value , false)" #endDate></p>  
+        <br><br>    
+        <div class="dropdown">
+         
+           <button class="dropdown-btn">{{task.userPost? task.userPost.userName: "Select an option"  }}</button>
+            <div class="dropdown-content">
+              <a *ngFor="let u of users" [id]="u.id" (click)="activeSetUser(u)"> 
+                {{u.userName}} <img class="imagIcon" [src]="u.userImgUrl"/>
+            </a>
+            </div>
+          </div>
+        <br><br>
+        <select (change)="onPrivacySelect($event)" [value]="task.privacy" >
+            <option >Select an option</option>
+            <option value="Department">Department</option>
+            <option value="Only direct management">Only direct management</option>
+            <option value="Entire company">Entire company</option>
+            <option value="Personal">Personal</option>
+        </select>
+        <br><br>
+        <div class="ButtonSection">
+            <button type="button" (click)="cancle()" >Cancel</button>
+            <button type="submit" (click)="submitForm()">Submit</button>
+        </div>
+
+    </form>
+</div>

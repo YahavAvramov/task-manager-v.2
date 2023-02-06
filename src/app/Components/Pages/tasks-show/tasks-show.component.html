@@ -1,0 +1,50 @@
+
+<div class="spaceDiv">
+   
+</div>
+<img src="../assets/menu.jpg" id="humborgerMenu" (click)="showOptions =! showOptions" />
+<div *ngFor="let task of allTasks">
+    <div class="courses-container">
+        <a (click)="conectToEditForm(task)" >
+            <div class="course">
+            <div class="course-preview">
+                <h4>Task privacy</h4>
+                <p id="taskPrivacy">{{task.privacy}}</p>
+            </div>
+            <div class="dateBar">
+                <h4>Date</h4>
+                <p id="taskDate">{{task.startDate | date: 'shortDate'}}</p> - <p>{{task.finishDate | date: 'shortDate'}}</p>
+            </div>
+            <div class="responsible">
+                <h4 class="hadderTag">Responsible</h4>
+               <p class="employeeNameTag"><img [src]="task.userPost.userImgUrl" class="employeeImg" />{{task.userPost.userName}}</p>
+            </div>
+
+            <div class="course-info">
+                <div class="progress-container">
+                    <div class="progress"></div>
+                    <span class="progress-text">
+                        6/9 Challenges
+                    </span>
+                    <div>
+                        <div *ngIf="showOptions" id= "edivMenuDiv">
+                          <a (click)="deletTask(task)" class="deleteLink" >Delete</a>  
+                          <a  (click)="conectToEditForm(task)" class="deleteLink">Edit</a> 
+                        </div>
+                     
+                    </div>
+
+
+                </div>
+                <h6 id="taskDiscription">Task discription</h6>
+                <p id="textPragraph">{{task.textValue}}</p>
+
+               
+            </div>
+        
+        </div>
+        </a>
+    </div>
+
+</div>
+

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UpTaskBarComponent } from './up-task-bar.component';
+import { TasksShowComponent } from './tasks-show.component';
 
-describe('UpTaskBarComponent', () => {
-  let component: UpTaskBarComponent;
-  let fixture: ComponentFixture<UpTaskBarComponent>;
+describe('TasksShowComponent', () => {
+  let component: TasksShowComponent;
+  let fixture: ComponentFixture<TasksShowComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UpTaskBarComponent ]
+      declarations: [ TasksShowComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UpTaskBarComponent);
+    fixture = TestBed.createComponent(TasksShowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
