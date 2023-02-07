@@ -1,6 +1,7 @@
 <div class="spaceDiv"></div>
 <nav [ngClass]="blurredClass">
-    <!-- the select Department element -->
+    <div class="filtersDiv">
+         <!-- the select privacy element -->
     <div [ngClass]="'selctDiv'">
         <p [ngClass]="'inputTag'">Department</p>
         <select [ngClass]="'departmentSelection'" (change)="onSelectPrivacy($event)" #selectValue>
@@ -8,7 +9,6 @@
             <option *ngFor="let department of departmentValues">{{department}}</option>
         </select>
     </div>
-
     <!-- the date slect element -->
     <div [ngClass]="'selctDiv'">
         <p [ngClass]="'inputTag'">From Date:</p>
@@ -16,6 +16,8 @@
         <p [ngClass]="'inputTag'">To Date:</p>
         <input type="date" class="MyDatePicker" (change)="filterByDate(selectedDate , finishDate)" #finishDate>
     </div>
+    </div>
+   
 
     <div>
 

@@ -3,8 +3,9 @@
 * {
 	box-sizing: border-box;
 }
-.spaceDiv{
-    height: 100px
+
+.spaceDiv {
+	height: 100px
 }
 
 body {
@@ -21,7 +22,6 @@ body {
 
 
 .course {
-
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -29,13 +29,13 @@ body {
 	max-width: 100%;
 	margin: 20px;
 	overflow: hidden;
-    padding-top: 20px;
+	padding-top: 20px;
 	background: linear-gradient(to right, rgb(255, 165, 0), rgb(128, 0, 128));
-	
 }
-.course:hover{
-    background: #97A5CE;
-    cursor: pointer;
+
+.course:hover {
+	background: #97A5CE;
+	cursor: pointer;
 }
 
 .course h4 {
@@ -132,10 +132,10 @@ body {
 	transform: translateX(-10px);
 }
 
-.social-panel {	
+.social-panel {
 	background-color: #fff;
 	border-radius: 16px;
-	box-shadow: 0 16px 31px -17px rgba(0,31,97,0.6);
+	box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
 	border: 5px solid #001F61;
 	display: flex;
 	flex-direction: column;
@@ -143,7 +143,7 @@ body {
 	align-items: center;
 	font-family: 'Muli';
 	position: relative;
-	height: 169px;	
+	height: 169px;
 	width: 370px;
 	max-width: calc(100% - 10px);
 }
@@ -186,9 +186,9 @@ body {
 .social-panel h4 {
 
 	margin: 20px 0;
-	color: #97A5CE;	
-	font-family: 'Muli';	
-	font-size: 14px;	
+	color: #97A5CE;
+	font-family: 'Muli';
+	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
 }
@@ -271,13 +271,14 @@ body {
 	.social-panel-container.visible {
 		transform: translateX(0px);
 	}
-	
+
 	.floating-btn {
 		right: 10px;
 	}
 }
-.dateBar{
-    
+
+.dateBar {
+
 	color: rgb(16, 14, 12);
 	max-width: 250px;
 	display: inline-block;
@@ -286,78 +287,105 @@ body {
 	margin-top: 30px;
 	text-decoration: none;
 }
-#textPragraph{
-    max-width: 300px;
+
+#textPragraph {
+	max-width: 300px;
 	height: max-content;
-    opacity: 2;
-    color:blue;
+	opacity: 2;
+	color: blue;
 }
-#taskDiscription{
-    opacity: 0.5;
-    font-size: 15px;
-    color: #001F61;
+
+#taskDiscription {
+	opacity: 0.5;
+	font-size: 15px;
+	color: #001F61;
 }
-#taskPrivacy{
-opacity: 2;
+
+#taskPrivacy {
+	opacity: 2;
 }
-#taskDate{
-    opacity: 2;
-    color: #001F61;
+
+#taskDate {
+	opacity: 2;
+	color: #001F61;
 }
-#humborgerMenu{
-    border-radius: 50%;
-    width: 30px;
-    top: 130px;
-    cursor: pointer;
-    margin-left: 95%;;
+
+#humborgerMenu {
+	border-radius: 50%;
+	width: 30px;
+	top: 130px;
+	cursor: pointer;
+	margin-left: 95%;
+	;
 }
-#humborgerMenu:hover{
-    width: 35px;
+
+#humborgerMenu:hover {
+	width: 35px;
 }
-#edivMenuDiv{
-display: flex;
-top: -150%;
-position: absolute;
+
+.edivMenuDiv {
+	display: flex;
+	top: -150%;
+	position: absolute;
 }
-.deleteLink{
-padding-left: 10px;
-color: blue;
-font-size: 15px;
-cursor: pointer;
+
+.deleteLink {
+	padding-left: 10px;
+	color: blue;
+	font-size: 15px;
+	cursor: pointer;
 }
-.deleteLink:hover{
-    font-size: 18px;
-    color: #001F61;
+
+.deleteLink:hover {
+	font-size: 18px;
+	color: #001F61;
 }
+
 /* resposable section in the note */
-.responsible{
-    position: absolute;
-    left: 60%;
+.responsible {
+	position: absolute;
+	left: 60%;
 }
-.employeeImg{
-    border-radius: 50%;
-    width: 40px;
-   margin-top: -8px;
- 
+
+.employeeImg {
+	border-radius: 50%;
+	width: 40px;
+	margin-top: -8px;
+
 }
-.employeeNameTag{
-    padding-left: 8px;
-    display: flex;
-    padding-top: 70px;
-    font-weight: bolder;
-    font-size: 15px;
+
+.employeeNameTag {
+	padding-left: 8px;
+	display: flex;
+	padding-top: 70px;
+	font-weight: bolder;
+	font-size: 15px;
 }
-.hadderTag{
-    position: absolute;
-   top: 30px;
-    margin: 20px 0;
-	color: #97A5CE;	
-	font-family: 'Muli';	
-	font-size: 14px;	
+
+.hadderTag {
+	position: absolute;
+	top: 30px;
+	margin: 20px 0;
+	color: #97A5CE;
+	font-family: 'Muli';
+	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
-    opacity: 0.6;
+	opacity: 0.6;
 	margin: 0;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-  }
+}
+
+.taskMenu {
+	
+	width: 20px;
+	height: 20px;
+	top: -45px;
+	position: absolute;
+	cursor: pointer;
+}
+.taskMenu:hover{
+	width: 25px;
+	height: 25px;
+}

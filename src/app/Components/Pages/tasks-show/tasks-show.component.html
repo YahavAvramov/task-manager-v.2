@@ -4,7 +4,7 @@
 </div>
 <img src="../assets/menu.jpg" id="humborgerMenu" (click)="showOptions =! showOptions" />
 <div *ngFor="let task of filterTasks">
-    <div class="courses-container">
+  
         <a (click)="conectToEditForm(task)" >
             <div class="course">
             <div class="course-preview">
@@ -27,24 +27,22 @@
                         6/9 Challenges
                     </span>
                     <div>
-                        <div *ngIf="showOptions" id= "edivMenuDiv">
+                        <a (mouseover)="showOptions =! showOptions"><img src="../assets/taskMenu.png" class="taskMenu"/></a>
+                        <div *ngIf="showOptions" class= "edivMenuDiv">
                           <a (click)="deletTask(task)" class="deleteLink" >Delete</a>  
                           <a  (click)="conectToEditForm(task)" class="deleteLink">Edit</a> 
                         </div>
                      
                     </div>
 
-
                 </div>
                 <h6 id="taskDiscription">Task discription</h6>
                 <p id="textPragraph">{{task.textValue}}</p>
-
                
             </div>
         
         </div>
         </a>
-    </div>
 
 </div>
 
