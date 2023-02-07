@@ -15,6 +15,7 @@ import { EditFormComponent } from './Components/Pages/edit-form/edit-form.compon
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home/:pram', component: HomeComponent },
   {path: 'newTask', component: MakeNewTaskComponent },
   {path: 'editor/:pram', component: EditFormComponent }
 ]

@@ -1,7 +1,7 @@
 
 <div id="content">
     <form>
-        <p *ngIf="task.userPost">{{task.userPost.userName}} <img class="imagIcon" [src]="task.userPost.userImgUrl"/> </p> 
+        <p *ngIf="task.userPost">{{task.userPost.userName}} <img class="hadderIcon" [src]="task.userPost.userImgUrl"/> </p> 
         <h1 class="hadderPopUp">New Task</h1>
         <input id="type-here" type="text" placeholder="Type here" [value]="task.textValue"  (change)="changeTaskText(taskValue.value)" #taskValue>
         <br><br>

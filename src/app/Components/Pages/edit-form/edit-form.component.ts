@@ -23,7 +23,7 @@ export class EditFormComponent implements OnInit {
   ngOnInit(): void {
     const paramString = this.route.snapshot.paramMap.get('pram');
     if (paramString) {
-      this.task = JSON.parse(decodeURIComponent(paramString));
+      this.task = JSON.parse(decodeURIComponent(paramString))as MyTask;
       this.startDate = this.task.startDate;
       this.finishDate = this.task.finishDate;
       this.privacy = this.task.privacy;
@@ -61,12 +61,14 @@ export class EditFormComponent implements OnInit {
     if (this.startDate > this.finishDate || !this.privacy || !this.userPost || !this.textValue) {
       return;
     }
-    else {
-      this.service.deleteTask(this.task.id).subscribe();
-      this.task = new MyTask(this.textValue, this.privacy, this.startDate, this.finishDate, this.userPost);
-      this.service.postTask(this.task).subscribe();
-      this.navRout.navigate(['']);
-
+    else { 
+      this.task.textValue = this.textValue;
+      this.task.startDate = this.startDate;
+      this.task.finishDate = this.finishDate;
+      this.task.privacy = this.privacy;
+      this.task.userPost = this.userPost;
+      this.service.putTask(this.task).subscribe();
+      this.navRout.navigate(['/home/', encodeURIComponent(JSON.stringify(this.task))])
     }
 
   }

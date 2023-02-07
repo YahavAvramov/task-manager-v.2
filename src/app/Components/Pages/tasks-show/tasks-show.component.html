@@ -3,7 +3,7 @@
    
 </div>
 <img src="../assets/menu.jpg" id="humborgerMenu" (click)="showOptions =! showOptions" />
-<div *ngFor="let task of allTasks">
+<div *ngFor="let task of filterTasks">
     <div class="courses-container">
         <a (click)="conectToEditForm(task)" >
             <div class="course">

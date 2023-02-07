@@ -1,11 +1,16 @@
+
 <div id="content">
-    <form>
-        <p *ngIf="selectedUser">{{selectedUser.userName}} <img class="imagIcon" [src]="selectedUser.userImgUrl"/> </p> 
+
+    <form id="cover-window"> 
+        <p *ngIf="selectedUser">{{selectedUser.userName}} <img class="hadderIcon" [src]="selectedUser.userImgUrl"/> </p> 
         <h1 class="hadderPopUp">New Task</h1>
-        <input id="type-here" type="text" placeholder="Type here" (change)="changeTaskText(taskValue.value)" #taskValue>
+        <div [ngClass]="alertClass">Plase fill up all the info to create the task</div>
+        <div id="spaceDiv">
+                  <input id="type-here" type="text" placeholder="Type here" (change)="changeTaskText(taskValue.value)" #taskValue [maxLength]="150" >
+        </div>
         <br><br>
       <p>Start: <input type="date" class="MyDatePicker" (change)="chandeDate(startDate.value, true)" #startDate></p>  
-      <p>End: <input type="date" class="MyDatePicker" (change)="chandeDate(endDate.value , false)" #endDate></p>  
+      <p>End: <input type="date" class="MyDatePicker" (change)="chandeDate(endDate.value , false)" #endDate id="endDate"></p>  
         <br><br>
         <div class="dropdown">
          
@@ -23,6 +28,7 @@
             <option value="Only direct managment">Only direct management</option>
             <option value="Entire company">Entire company</option>
             <option value="Personal">Personal</option>
+
         </select>
         <br><br>
         <div class="ButtonSection">
@@ -31,4 +37,5 @@
         </div>
 
     </form>
+
 </div>

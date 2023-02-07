@@ -1,21 +1,80 @@
-
-.hadderPopUp{
-    border: 1px solid gainsboro;
+#cover-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 80%;
+  z-index: 999;
+  opacity:2;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
   }
-  form {
-    top: 50%;
-    left: 50%;
-  text-align: center;
-  border-radius: 10px;
-}
 
+.headerPopUp {
+  border: 1px solid #ccc;
+  background: fixed;
+  background: rgb(190, 190, 226);
+  border-radius: 10px;
+  background-color: rgba(201, 211, 231, 0.2);
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  form {
+    background:  rgb(190, 190, 226);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  }
+
+  .hadderPopUp{
+left: 50%;
+margin-bottom: -20px;
+  }
+.notActive{
+  visibility: hidden;
+}
+.activeAlert{
+  position: relative;
+ margin-top: 50px;
+  background-color: palevioletred;
+  font-size: 15px;
+  font-weight: 700;
+}
+#spaceDiv{
+  
+  width: 300px;
+ margin-bottom: 40px;
+  align-content: center;
+  position: relative;
+ top: 10%;
+ align-items: center;
+ text-align: center;
+ height: 80px;
+ padding-top: 0%;
+}
 #type-here {
   width: 100%;
-  height: 120px;
+  height: 100%;
+  padding: 0.5em;
   font-size: 13px;
+  text-align: left;
+  justify-content: center;
+  top: 15%;
   border-radius: 8px;
   border: 1px solid gray;
-  margin-bottom: 20px;
+  border: none;
+  background-color: antiquewhite;
+
 }
 
 select {
@@ -27,20 +86,35 @@ select {
   margin-bottom: 20px;
 }
 
-button[type="submit"], button[type="button"] {
-  width: 100%;
-  padding: 10px;
-  font-size: 18px;
-  border-radius: 5px;
-  border: 1px solid gray;
-  margin-top: 20px;
-  background-color: crimson;
+button[type="submit"] {
+  background: linear-gradient(to right, rgb(255, 165, 0), rgb(128, 0, 128));
+  border: none;
+  border-radius: 10px;
   color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
   cursor: pointer;
+  margin-left: 50px;
+}
+button[type="button"]{
+  margin-left: 50px;
+  border-radius: 5px;
+  color: yellowgreen;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  background:none;
 }
 
-button[type="submit"]:hover, button[type="button"]:hover {
-  background-color: lightblue;
+button[type="submit"]:hover {
+  font-size: 18px;
+}
+button[type="button"]:hover {
+  font-size: 18px;
 }
 .ButtonSection{
     display: flex;
@@ -48,6 +122,10 @@ button[type="submit"]:hover, button[type="button"]:hover {
 .imagIcon{
     border-radius: 50%;
     width: 25px;
+}
+.hadderIcon{
+  border-radius: 50%;
+  width: 40px;
 }
 /* drop down list for users */
 .dropdown {

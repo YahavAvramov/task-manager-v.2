@@ -1,4 +1,6 @@
-
+.spaceDiv{
+  height: 20px;
+}
 #homeImage{
     top: 50%;
     left: 50%;
@@ -6,6 +8,14 @@
     justify-content: center;
     height: 50vh;
     transform: translate(-50%, -50%);
+    z-index: index -1; ;
+}
+#noElementTag{
+  color:white;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .TaskBarMain{
     display: flex;
@@ -99,7 +109,6 @@ display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
     width: 30%;
     height: 80%;
     z-index: 999;
@@ -116,7 +125,6 @@ display: flex;
     left: 0%;
     top: 95%;
     cursor: pointer;
-
   }
 
-  /*   pop up form */
+ 

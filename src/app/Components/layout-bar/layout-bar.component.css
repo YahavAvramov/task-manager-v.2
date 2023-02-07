@@ -1,11 +1,17 @@
 nav {
     justify-content: left;
-    background-color: lightblue;
-    top: 0%;
+
     display: flex;
     align-items: center;
 }
-
+#navBar{
+    position: relative;
+    background-color: white;
+    height: 50px;
+    margin-top: -9px;
+    width: 100%;
+    left:0%;
+}
 nav ul {
     list-style: none;
     display: flex;

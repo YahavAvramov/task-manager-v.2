@@ -21,6 +21,7 @@ body {
 
 
 .course {
+
 	background-color: #fff;
 	border-radius: 10px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
@@ -29,10 +30,11 @@ body {
 	margin: 20px;
 	overflow: hidden;
     padding-top: 20px;
+	background: linear-gradient(to right, rgb(255, 165, 0), rgb(128, 0, 128));
 	
 }
 .course:hover{
-    background-color: #97A5CE;
+    background: #97A5CE;
     cursor: pointer;
 }
 
@@ -50,7 +52,7 @@ body {
 
 .course-preview {
 
-	color: rgb(248, 165, 11);
+	color: rgb(11, 9, 4);
 	padding: 30px;
 	max-width: 250px;
 }
@@ -180,10 +182,6 @@ body {
 	margin: 0 5px;
 }
 
-.social-panel p a {
-	color: #FF7500;
-	text-decoration: none;
-}
 
 .social-panel h4 {
 
@@ -289,7 +287,8 @@ body {
 	text-decoration: none;
 }
 #textPragraph{
-    max-width: 500px;
+    max-width: 300px;
+	height: max-content;
     opacity: 2;
     color:blue;
 }

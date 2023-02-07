@@ -1,3 +1,4 @@
+<div class="spaceDiv"></div>
 <nav [ngClass]="blurredClass">
     <!-- the select Department element -->
     <div [ngClass]="'selctDiv'">
@@ -9,13 +10,11 @@
     </div>
 
     <!-- the date slect element -->
-
-
     <div [ngClass]="'selctDiv'">
         <p [ngClass]="'inputTag'">From Date:</p>
-        <input type="date" class="MyDatePicker" (change)="filterByDate(selectedDate)" #selectedDate>
+        <input type="date" class="MyDatePicker" (change)="filterByDate(selectedDate , finishDate)" #selectedDate>
         <p [ngClass]="'inputTag'">To Date:</p>
-        <input type="date" class="MyDatePicker" (change)="filterByFinishDate(finishDate)" #finishDate>
+        <input type="date" class="MyDatePicker" (change)="filterByDate(selectedDate , finishDate)" #finishDate>
     </div>
 
     <div>
@@ -23,10 +22,11 @@
         <a (click)="coverAction()" [ngClass]="'addObjective'">Add objective<img src="..\assets\plus.png"
                 id="plusIcon" /></a>
     </div>
-    <img *ngIf="!allTasks" id="homeImage" src="..\assets\homeImg.png" />
+    <img *ngIf="checkIfThereTasks()" id="homeImage" src="..\assets\homeImg.png" />
+    <h3 *ngIf="checkIfThereTasks()" id="noElementTag">You dont have OKR here ....</h3>
 </nav>
 
-<app-tasks-show [allTasks]="filterTasks"></app-tasks-show>
+<app-tasks-show [allTasks]="allTasks"  [filterTasks]="filterTasks" (updateTasks)="updateTasks()"></app-tasks-show>
 
 <div *ngIf="showCover" id="cover-window">
    <app-make-new-task [selectedUser]="selectedUser" [users]="users" (unshowPopUp)="coverAction()"  (setSelectedUser)="setSelectedUser($event)" (submitFormEvent)="SubmitForm($event)"></app-make-new-task>

@@ -1,6 +1,6 @@
 import { WebService } from './../../../Service/web.service';
 import MyTask from 'src/app/Models/Task';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 })
 export class TasksShowComponent implements OnInit {
   @Input() allTasks: MyTask[] = [];
+  @Input() filterTasks: MyTask[] = [];
+
+  @Output() updateTasks: EventEmitter<any> = new EventEmitter<any>();
   showEditForm: boolean = false;
   showOptions: boolean = false;
   constructor(private service: WebService, private router: Router) { }
@@ -18,7 +21,9 @@ export class TasksShowComponent implements OnInit {
   }
   deletTask(task: MyTask) {
     this.service.deleteTask(task.id).subscribe();
+    this.filterTasks = this.filterTasks.filter(t => t != task);
     this.allTasks = this.allTasks.filter(t => t != task);
+    this.updateTasks.emit();
   }
 
   conectToEditForm(task: MyTask) {
