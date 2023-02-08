@@ -42,6 +42,8 @@ export class HomeComponent implements OnInit {
       let index = this.allTasks.findIndex(task => task.id == this.taskToUpdate.id);
       if (index != -1) {
         this.allTasks[index] = this.taskToUpdate;
+        this.allTasks = this.allTasks;
+        this.filterTasks = this.allTasks;
       }
     }
 
@@ -76,6 +78,7 @@ export class HomeComponent implements OnInit {
     this.service.postTask(taskToAdd).subscribe();
     this.allTasks.push(taskToAdd);
     this.allTasks = this.allTasks;
+   this.filterTasks = this.allTasks;
     this.coverAction();
 
   }
