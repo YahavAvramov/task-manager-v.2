@@ -25,7 +25,7 @@ export class TasksShowComponent implements OnInit {
     this.allTasks = this.allTasks.filter(t => t != task);
     this.updateTasks.emit();
   }
-
+//Routing to the edit component and sending the task using the URL address
   conectToEditForm(task: MyTask) {
     this.router.navigate(['/editor/', encodeURIComponent(JSON.stringify(task))])
   }

@@ -64,6 +64,7 @@ export class HomeComponent implements OnInit {
     else return false
   }
 
+  //Responsible for whether the make-new-task component is displayed
   coverAction() {
     this.showCover = !this.showCover;
     if (this.showCover) { this.blurredClass = 'TaskBarMainblurred' }
@@ -73,7 +74,7 @@ export class HomeComponent implements OnInit {
   setSelectedUser(user: User) {
     this.selectedUser = user;
   }
-
+//This function is activated when the form in the make-new-task component is submitted
   SubmitForm(taskToAdd: MyTask) {
     this.service.postTask(taskToAdd).subscribe();
     this.allTasks.push(taskToAdd);
@@ -108,8 +109,7 @@ export class HomeComponent implements OnInit {
     
   }
 
-
-
+//This function filters the tasks that are presented to the user according to the privacy choice made by the user
   onSelectPrivacy(privacy: any) {
     this.privacy = privacy;
     if (privacy.target.value.toUpperCase() == "ALL") { this.filterTasks = this.allTasks }

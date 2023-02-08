@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./edit-form.component.css']
 })
 export class EditFormComponent implements OnInit {
-  task!: MyTask;
+  task!: MyTask; //The current task that has now been edited
   users: User[] = [];
   startDate!: Date;
   finishDate!: Date;
@@ -21,6 +21,7 @@ export class EditFormComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: WebService, private navRout: Router ,private location: Location) { }
 
   ngOnInit(): void {
+    //get the task values by the URL bar - and parse this from JSON to object
     const paramString = this.route.snapshot.paramMap.get('pram');
     if (paramString) {
       this.task = JSON.parse(decodeURIComponent(paramString))as MyTask;
@@ -35,28 +36,27 @@ export class EditFormComponent implements OnInit {
       this.users = data as User[];
     });
   }
-
+//This function initializes the value of the task description
   changeTaskText(taskValue: string) {
     this.textValue = taskValue;
     this.task.textValue =taskValue;
   }
-
+//This function initializes the user of the task
   activeSetUser(user: User) {
     this.userPost = user;
     this.task.userPost = user;
   }
-  onPrivacySelect(privacy: any) {
-    this.privacy = privacy.target.value;
-  }
-  cancle() {
-    this.navRout.navigate(['']);
-  }
+  //This function changes the privacy level of the task according to the user's choice
+  onPrivacySelect(privacy: any) {this.privacy = privacy.target.value;}
+    
+  cancle() { this.navRout.navigate(['']);  }//return to home component
 
+   //This function changes the task date
   changeDate(date: any, isStartDate: boolean) {
     if (isStartDate) { this.startDate = date as Date }
     else { this.finishDate = date as Date }
   }
-
+//This function changes the task in json-server and sends the object to the home component to update the UI
   async submitForm() {
     if (this.startDate > this.finishDate || !this.privacy || !this.userPost || !this.textValue) {
       return;
