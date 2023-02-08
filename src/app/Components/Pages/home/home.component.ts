@@ -27,6 +27,9 @@ export class HomeComponent implements OnInit {
   allTasks: MyTask[] = [];
   filterTasks: MyTask[] = [];
 
+  tmpFilteredTasks: MyTask[] = [];
+  tmpAlltasks: MyTask[] = [];
+
   taskToUpdate!: MyTask;
   privacy!: string;
 
@@ -42,8 +45,6 @@ export class HomeComponent implements OnInit {
       let index = this.allTasks.findIndex(task => task.id == this.taskToUpdate.id);
       if (index != -1) {
         this.allTasks[index] = this.taskToUpdate;
-        this.allTasks = this.allTasks;
-        this.filterTasks = this.allTasks;
       }
     }
 
@@ -74,19 +75,15 @@ export class HomeComponent implements OnInit {
   setSelectedUser(user: User) {
     this.selectedUser = user;
   }
-//This function is activated when the form in the make-new-task component is submitted
+  //This function is activated when the form in the make-new-task component is submitted
   SubmitForm(taskToAdd: MyTask) {
-    this.service.postTask(taskToAdd).subscribe();
-    this.allTasks.push(taskToAdd);
-    this.allTasks = this.allTasks;
-   this.filterTasks = this.allTasks;
+   this.allTasks.push(taskToAdd);
     this.coverAction();
-
   }
   //this function get a date range from the user and filter all the tasks that are not in this range
   filterByDate(startDate: any, finishDate: any) {
     //when user didn't selected
-    if (!startDate.value && !finishDate.value) { this.filterTasks = this.allTasks; return;}
+    if (!startDate.value && !finishDate.value) { this.filterTasks = this.allTasks; return; }
 
     //when finish date is undifind - fillter only by starting date
     if (!finishDate.value) {
@@ -106,10 +103,10 @@ export class HomeComponent implements OnInit {
       this.filterTasks = this.allTasks.filter(t => t.startDate >= startDate.value && t.finishDate <= finishDate.value);
       return;
     }
-    
+
   }
 
-//This function filters the tasks that are presented to the user according to the privacy choice made by the user
+  //This function filters the tasks that are presented to the user according to the privacy choice made by the user
   onSelectPrivacy(privacy: any) {
     this.privacy = privacy;
     if (privacy.target.value.toUpperCase() == "ALL") { this.filterTasks = this.allTasks }

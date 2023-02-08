@@ -1,3 +1,4 @@
+import { WebService } from './../../../Service/web.service';
 import User from 'src/app/Models/User';
 import { Component, EventEmitter, Input, OnInit, Output, ViewChild, ElementRef } from '@angular/core';
 import MyTask from 'src/app/Models/Task';
@@ -9,8 +10,8 @@ import MyTask from 'src/app/Models/Task';
 })
 export class MakeNewTaskComponent implements OnInit {
 
-  constructor() { }
-  selectPrivacy!: string;
+  constructor(private service:WebService) { }
+  selectPrivacy: string = "Department";
   taskContent!: string;
 
   startDate!: Date;
@@ -57,6 +58,7 @@ export class MakeNewTaskComponent implements OnInit {
     }
     else {
       this.taskToAdd = new MyTask(this.taskContent, this.selectPrivacy, this.startDate, this.finishDate, this.selectedUser);
+      this.service.postTask(this.taskToAdd).subscribe();
       this.submitFormEvent.emit(this.taskToAdd);
     }
   }

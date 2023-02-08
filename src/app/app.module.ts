@@ -28,8 +28,6 @@ const routes: Routes = [
     MakeNewTaskComponent,
     TasksShowComponent,
     EditFormComponent
-   
-    
   ],
   imports: [
     BrowserModule,
