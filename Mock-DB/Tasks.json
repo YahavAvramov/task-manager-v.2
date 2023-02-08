@@ -23,6 +23,18 @@
         "userImgUrl": "../assets/employees/Mali.jpg"
       },
       "id": 2
+    },
+    {
+      "textValue": "fh",
+      "privacy": "Entire company",
+      "startDate": "2023-02-08",
+      "finishDate": "2023-02-10",
+      "userPost": {
+        "id": 1,
+        "userName": "Almarie",
+        "userImgUrl": "../assets/employees/Almarie.jpg"
+      },
+      "id": 3
     }
   ]
 }
