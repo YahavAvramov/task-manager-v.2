@@ -1,27 +1,40 @@
-# TaskManager
+# Task-Manager
+This project is a task management solution for teams, that edit, add, and delete tasks.\
+Each task is equipped with detailed information such as creator, department, start/end dates, and a comprehensive description.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+## Project layers
+the task management application features a client-side built-in Angular and is coded in TypeScript.
 
-## Development server
+The server side is simulation by JSON-server, that also provides data storage for user information and task details.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+In the file `src\app\Service\web.service.ts` is the service that is responsible for communication between the Json server and the user UI. \
+its allows the user to receive information and change information from that Json server.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### How to run
+To start using the task management application\
+simply duplicate the project to your local computer and open it in a code editor such as Visual Studio Code or your preferred platform.
 
-## Build
+##### `open a terminal window (CLI)`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run this command in the CLI:
+##### `npm run taskServer` 
+This command runs the task server at port http://localhost:4100/Tasks on your computer, you can see the full command in the package.json file in the project.
 
-## Running unit tests
+##### `open a new terminal window (CLI)`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run this command in the CLI:
+##### `npm run usersServer`
+This command runs the users server at port http://localhost:4000/Users on your computer, you can see the full command in the package.json file in the project.
 
-## Running end-to-end tests
+##### `open a new terminal window (CLI)`
+run the project by:
+##### `ng serve`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Technologies in the project:
 
-## Further help
+##### Json-server/ Angular / TypeScript / Html / Css
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
