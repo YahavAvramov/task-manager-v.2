@@ -4,17 +4,20 @@ nav {
     display: flex;
     align-items: center;
 }
-#navBar{
-    position: relative;
-    background-color: white;
-    height: 50px;
-    margin-top: -9px;
-    width: 100%;
-    left:0%;
-}
-nav ul {
-    list-style: none;
-    display: flex;
+
+#navBar {
+    width: auto;
+    height: auto;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 5.690140724182129px 5.690140724182129px 0px #0000000D;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    background: #FFFFFF;
+    box-shadow: 0px 5.69014px 5.69014px rgba(0, 0, 0, 0.05);
 }
 
 nav a {
@@ -26,19 +29,21 @@ nav a {
 
 #logo {
     justify-content: left;
-    border-radius: 10px;
+    border-radius: 0px;
     height: 50px;
 }
-#logo:hover{
+
+#logo:hover {
     height: 55px;
-  }
+}
 
 #okr {
     align-items: center;
     position: absolute;
     left: 50%;
 }
-#graphIcon{
+
+#graphIcon {
     position: absolute;
     top: 0%;
     left: 99%;
@@ -48,7 +53,8 @@ nav a {
     margin-top: 30px;
     cursor: pointer;
 }
-#starIcon{
+
+#starIcon {
     position: absolute;
     top: 0%;
     left: 97%;
@@ -58,7 +64,8 @@ nav a {
     margin-top: 30px;
     cursor: pointer;
 }
-#alertIcon{
+
+#alertIcon {
     position: absolute;
     top: 0%;
     left: 95%;
@@ -68,11 +75,14 @@ nav a {
     margin-top: 30px;
     cursor: pointer;
 }
-#alertIcon:hover{
+
+#alertIcon:hover {
     width: 22px;
     height: 22px;
 }
-#starIcon:hover , #graphIcon:hover{
+
+#starIcon:hover,
+#graphIcon:hover {
     width: 17px;
     height: 17px;
 }

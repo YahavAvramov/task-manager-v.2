@@ -1,24 +1,24 @@
-<div class="spaceDiv"></div>
+
 <nav [ngClass]="blurredClass">
     <div class="filtersDiv">
          <!-- the select privacy element -->
     <div [ngClass]="'selctDiv'">
         <p [ngClass]="'inputTag'">Department</p>
         <select [ngClass]="'departmentSelection'" (change)="onSelectPrivacy($event)" #selectValue>
-            <option value="all">All</option>
-            <option *ngFor="let department of departmentValues">{{department}}</option>
+            <option value="all" class="departmentOption">All</option>
+            <option *ngFor="let department of departmentValues" class="departmentOption">{{department}}</option>
         </select>
     </div>
     <!-- the date slect element -->
-    <div [ngClass]="'selctDiv'">
-        <p [ngClass]="'inputTag'">From Date:</p>
+    <div [ngClass]="'selectDate'">
+        <p [ngClass]="'inputTagDate'">From Date:</p>
         <input type="date" class="MyDatePicker" (change)="filterByDate(selectedDate , finishDate)" #selectedDate>
-        <p [ngClass]="'inputTag'">To Date:</p>
+        <p [ngClass]="'inputTagDate'">To Date:</p>
         <input type="date" class="MyDatePicker" (change)="filterByDate(selectedDate , finishDate)" #finishDate>
     </div>
     </div>
    
-
+    <div class="spaceDiv"></div>
     <div>
 
         <a (click)="coverAction()" [ngClass]="'addObjective'">Add objective<img src="..\assets\plus.png"
@@ -26,10 +26,10 @@
     </div>
     <img *ngIf="checkIfThereTasks()" id="homeImage" src="..\assets\homeImg.png" />
     <h3 *ngIf="checkIfThereTasks()" id="noElementTag">You dont have OKR here ....</h3>
-</nav>
+
 
 <app-tasks-show [allTasks]="allTasks"  [filterTasks]="filterTasks" (updateTasks)="updateTasks()"></app-tasks-show>
-
+</nav>
 <div *ngIf="showCover" id="cover-window">
    <app-make-new-task [selectedUser]="selectedUser" [users]="users" (unshowPopUp)="coverAction()"  (setSelectedUser)="setSelectedUser($event)" (submitFormEvent)="SubmitForm($event)"></app-make-new-task>
 </div>

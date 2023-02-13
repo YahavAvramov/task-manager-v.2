@@ -1,48 +1,61 @@
-
 <div class="spaceDiv">
-   
+
 </div>
 <img src="../assets/menu.jpg" id="humborgerMenu" (click)="showOptions =! showOptions" />
 <div *ngFor="let task of filterTasks">
-  
-        <a (click)="conectToEditForm(task)" >
-            <div class="course">
+
+    <a (click)="conectToEditForm(task)">
+        <div class="course">
             <div class="course-preview">
-                <h4>Task privacy</h4>
-                <p id="taskPrivacy">{{task.privacy}}</p>
+                <h4>Objective</h4>
+                <p id="taskDiscription">{{task.textValue}}</p>
+                <a>
+                    <div class="plusButton"><img src="..\assets\plus.png" id="plusIcon" />
+                        <p [ngClass]="'AddKeyResult'">Add key result</p>
+                        <hr>
+                    </div>
+                </a>
             </div>
+            <div class="spaceDivWidth"></div>
+            <div class="progressDiv">
+                <span class="progress-text">
+                    0%
+                </span>
+                <div class="progress"></div>
+            </div>
+            <div class="spaceDivWidth"></div>
             <div class="dateBar">
-                <h4>Date</h4>
-                <p id="taskDate">{{task.startDate | date: 'shortDate'}}</p> - <p>{{task.finishDate | date: 'shortDate'}}</p>
+
+                <h4 id="dateTag">Date</h4>
+                <p id="taskDate">{{task.startDate | date: 'shortDate'}} - {{task.finishDate | date: 'shortDate'}}
+                </p>
             </div>
             <div class="responsible">
-                <h4 class="hadderTag">Responsible</h4>
-               <p class="employeeNameTag"><img [src]="task.userPost.userImgUrl" class="employeeImg" />{{task.userPost.userName}}</p>
+                <h4 class="hadderTag">Assignine</h4>
+                <p class="employeeNameTag"><img [src]="task.userPost.userImgUrl"
+                        class="employeeImg" />{{task.userPost.userName}}</p>
             </div>
 
             <div class="course-info">
                 <div class="progress-container">
-                    <div class="progress"></div>
-                    <span class="progress-text">
-                        6/9 Challenges
-                    </span>
+                   <img (mouseover)="showOptions =! showOptions" src="../assets/three-dots.png" class="taskMenu">
                     <div>
-                        <a (mouseover)="showOptions =! showOptions"><img src="../assets/taskMenu.png" class="taskMenu"/></a>
-                        <div *ngIf="showOptions" class= "edivMenuDiv">
-                          <a (click)="deletTask(task)" class="deleteLink" >Delete</a>  
-                          <a  (click)="conectToEditForm(task)" class="deleteLink">Edit</a> 
+
+                        <div *ngIf="showOptions" class="edivMenuDiv">
+                            <a (click)="deletTask(task)" id="deleteLink">Delete</a>
+                            <a (click)="conectToEditForm(task)" id="deleteLink">Edit</a>
                         </div>
-                     
+
                     </div>
 
                 </div>
-                <h6 id="taskDiscription">Task discription</h6>
-                <p id="textPragraph">{{task.textValue}}</p>
-               
+                <div class="privacySection">
+                    <h6 id="privacyTag">Privacy</h6>
+                    <p id="privacy">{{task.privacy}}</p>
+                </div>
             </div>
-        
+
         </div>
-        </a>
+    </a>
 
 </div>
-

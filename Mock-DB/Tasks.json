@@ -1,54 +1,6 @@
 {
   "Tasks": [
     {
-      "textValue": "wer11asdf21144",
-      "privacy": "Entire company",
-      "startDate": "2023-02-09",
-      "finishDate": "2023-02-15",
-      "userPost": {
-        "id": 5,
-        "userName": "Mali",
-        "userImgUrl": "../assets/employees/Mali.jpg"
-      },
-      "id": 2
-    },
-    {
-      "textValue": "fhdsxc",
-      "privacy": "Entire company",
-      "startDate": "2023-02-08",
-      "finishDate": "2023-02-10",
-      "userPost": {
-        "id": 0,
-        "userName": "Moshe Vayner",
-        "userImgUrl": "../assets/employees/Mosh.jpg"
-      },
-      "id": 3
-    },
-    {
-      "textValue": "999dsf",
-      "privacy": "Entire company",
-      "startDate": "2023-02-11",
-      "finishDate": "2023-02-13",
-      "userPost": {
-        "id": 5,
-        "userName": "Mali",
-        "userImgUrl": "../assets/employees/Mali.jpg"
-      },
-      "id": 4
-    },
-    {
-      "textValue": "dfrg1",
-      "privacy": "Department",
-      "startDate": "2023-02-11",
-      "finishDate": "2023-02-20",
-      "userPost": {
-        "id": 2,
-        "userName": "Ariel",
-        "userImgUrl": "../assets/employees/Ariel.jpg"
-      },
-      "id": 5
-    },
-    {
       "textValue": "gn1",
       "privacy": "Only direct managment",
       "startDate": "2023-02-12",
@@ -59,18 +11,6 @@
         "userImgUrl": "../assets/employees/Mosh.jpg"
       },
       "id": 6
-    },
-    {
-      "textValue": "dth1",
-      "privacy": "Only direct managment",
-      "startDate": "2023-02-12",
-      "finishDate": "2023-02-15",
-      "userPost": {
-        "id": 1,
-        "userName": "Almarie",
-        "userImgUrl": "../assets/employees/Almarie.jpg"
-      },
-      "id": 7
     },
     {
       "textValue": "fth2",
@@ -85,14 +25,14 @@
       "id": 8
     },
     {
-      "textValue": "dfh1",
-      "privacy": "Only direct managment",
-      "startDate": "2023-02-05",
-      "finishDate": "2023-02-13",
+      "textValue": "ryth",
+      "privacy": "Entire company",
+      "startDate": "2023-02-13",
+      "finishDate": "2023-02-16",
       "userPost": {
-        "id": 5,
-        "userName": "Mali",
-        "userImgUrl": "../assets/employees/Mali.jpg"
+        "id": 4,
+        "userName": "Itay",
+        "userImgUrl": "../assets/employees/Itay.jpg"
       },
       "id": 9
     }

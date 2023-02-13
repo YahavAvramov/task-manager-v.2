@@ -1,136 +1,229 @@
-.spaceDiv{
-  height: 20px;
+.spaceDiv {
+  height: 100px;
 }
-#homeImage{
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    justify-content: center;
-    height: 50vh;
-    transform: translate(-50%, -50%);
-    z-index: index -1; ;
+
+#homeImage {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  justify-content: center;
+  height: 50vh;
+  transform: translate(-50%, -50%);
+  z-index: index -1;
+  ;
 }
-#noElementTag{
-  color:white;
+
+#noElementTag {
+  color: white;
   position: absolute;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.TaskBarMain{
-    display: flex;
-    align-items: center;   
+
+.TaskBarMain {
+  display: flex;
+  align-items: center;
 }
 
 /* make the background blurred */
-.TaskBarMainblurred{
-    display: flex;
-    align-items: center; 
-    opacity: 0.1;
+.TaskBarMainblurred {
+  display: flex;
+  align-items: center;
+  background: #003B60;
+  opacity: 0.1;
 
 }
 
 /* The select element list  */
-.departmentSelection{
-    cursor: pointer;
+.departmentSelection {
+  cursor: pointer;
+  width: 253px;
+  height: 35px;
 
-padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  width: 250px;
-  height: 40px;
-  text-align: center;
-  border:none;
-appearance: none;
-  background-color: transparent;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 7" width="14" height="7"><path d="M7 7L0 0h14z" fill="gold" /></svg>');
-    background-repeat: no-repeat;
-    background-position: right 5px bottom 50%;
-    padding-right: 20px
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  /* identical to box height, or 146% */
+
+  display: flex;
+  align-items: center;
+
+  color: #003B60;
+
+  border: none;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+
 }
 
 /* the input format for this page */
-.selctDiv{
-  display: flex;
-    border: 1px solid #ccc;
-    background-color: white;
-    padding-bottom: 0%;
-    border-radius: 5px;
-    padding-left: 50px;
+.selctDiv {
+  display: block;
+  position: absolute;
+  width: 380px;
+  height: 75px;
+  left: 35px;
+  top: 30px;
+
+  background: #FFFFFF;
+  border-radius: 4px;
 }
-.inputTag{
-font-size: 10px;
-font-weight: 200;
-text-align: center;
+
+.inputTag {
+  font-size: 10px;
+  font-weight: 200;
+  text-align: center;
 }
-/* input date picker element */ 
 
- .MyDatePicker {
-    cursor: pointer;
-    width: 250px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 14px;
-    outline: none;
-    left: 10px;
-  }
- 
+/* input date picker element */
 
-  #plusIcon{
-    cursor: pointer;
- margin-top: -5px;
-    width: 30px;
-    padding-left: 5px;
-  }
- 
+.MyDatePicker {
+  cursor: pointer;
+  width: 250px;
+  height: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  outline: none;
 
-  .addObjective{
-    cursor: pointer;
-display: flex;
-    position: absolute;
-    right: 5%;
-    font-size: 15px;
-    color: orange;
-  }
- 
-  /* Effects */
- 
-   #plusIcon:hover{
-    width: 35px;
-  }
-  .addObjective:hover{
-    font-size: 18px;
-  }
+  color: #003B60;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+
+#plusIcon {
+  cursor: pointer;
+  margin-top: -5px;
+  width: 30px;
+  padding-left: 5px;
+}
+
+
+.addObjective {
+  cursor: pointer;
+  position: absolute;
+  left: 80.61%;
+  right: 0%;
+  top: 12.75%;
+  bottom: 9.12%;
+
+  height: 30px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 102% */
+
+  align-items: center;
+  /* orange */
+
+  color: #FFB636;
+}
+
+/* Effects */
+
+#plusIcon:hover {
+  width: 31px;
+}
+
+.addObjective:hover {
+  font-size: 27px;
+}
+
 /* 
   cover window to add task */
-  #cover-window {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: 80%;
-    z-index: 999;
-    opacity:2;
-    border-radius: 8px;
-  }
-  
-  #content {
-    padding: 20px;
-  }
-  .backLink{
-    color: blue;
-    position: absolute;
-    left: 0%;
-    top: 95%;
-    cursor: pointer;
-  }
-  .filtersDiv{
-display: flex;
-left: 15%;
-position: absolute;
-margin-top: 30px;
-  }
+#cover-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 80%;
+  z-index: 999;
+  opacity: 2;
+  border-radius: 8px;
+}
 
- 
+#content {
+  padding: 20px;
+}
+
+.backLink {
+  color: blue;
+  position: absolute;
+  left: 0%;
+  top: 95%;
+  cursor: pointer;
+}
+
+.filtersDiv {
+  top: 8%;
+  left: 0%;
+  position: absolute;
+}
+
+.departmentOption {
+  width: 253px;
+  height: 35px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+
+  display: flex;
+  align-items: center;
+
+  color: #003B60;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  border: none;
+}
+
+.selectDate {
+  position: absolute;
+  top: 5.63%;
+  bottom: 89.27%;
+  background: #FFFFFF;
+
+  box-shadow: 0px 0px 12px rgba(25, 16, 62, 0.12);
+  border-radius: 4px;
+  margin-left: 450px;
+}
+
+
+.inputTagDate {
+
+  width: 225px;
+  height: 16px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  display: flex;
+  align-items: center;
+
+  color: #585961;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   overflow: auto;
-  }
+}
 
 .headerPopUp {
   border: 1px solid #ccc;
@@ -26,61 +26,75 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  }
-  
-  form {
-    border-radius: 10px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background-color: white;
-    padding: 20px;
-    border: 1px solid black;
-    box-shadow: 2px 2px 10px #ccc;
-    opacity: 0.9;
-  }
+}
 
-  .hadderPopUp{
-left: 50%;
-margin-bottom: -20px;
-  }
-.notActive{
+form {
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: max-content;
+  width: 400px;
+  background: #F1F4F7;
+  padding: 20px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 10px #ccc;
+  border-radius: 10px;
+}
+
+#selectDateDiv {
+  display: flex;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 12px rgba(25, 16, 62, 0.12);
+  border-radius: 4px;
+  margin-top: 15%;
+}
+
+.hadderPopUp {
+  left: 50.59%;
+  right: 27.24%;
+  top: 5.62%;
+  bottom: 90.36%;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 30px;
+
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+
+  color: #003B60;
+
+}
+
+.notActive {
   visibility: hidden;
 }
-.activeAlert{
+
+.activeAlert {
   position: relative;
- margin-top: 50px;
   background-color: palevioletred;
   font-size: 15px;
   font-weight: 700;
 }
-#spaceDiv{
-  
-  width: 300px;
- margin-bottom: 40px;
-  align-content: center;
-  position: relative;
- top: 10%;
- align-items: center;
- text-align: center;
- height: 80px;
- padding-top: 0%;
-}
+
+#spaceDiv {}
+
 #type-here {
   width: 100%;
   height: 100%;
-  padding: 0.5em;
   font-size: 13px;
   text-align: left;
-  justify-content: center;
-  top: 15%;
   border-radius: 8px;
   border: 1px solid gray;
   border: none;
-  background-color: antiquewhite;
-
+  background: #FFFFFF;
+  box-shadow: 0px 0px 12px rgba(25, 16, 62, 0.12);
+  border-radius: 4px;
 }
 
 select {
@@ -93,7 +107,8 @@ select {
 }
 
 button[type="submit"] {
-  background: linear-gradient(to right, rgb(255, 165, 0), rgb(128, 0, 128));
+  background: linear-gradient(87.05deg, #FFB636 -9.68%, #FF0092 136.5%);
+border-radius: 4px;
   border: none;
   border-radius: 10px;
   color: white;
@@ -105,55 +120,75 @@ button[type="submit"] {
   cursor: pointer;
   margin-left: 50px;
 }
-button[type="button"]{
+
+button[type="button"] {
+  cursor: pointer;
   margin-left: 50px;
   border-radius: 5px;
-  color: yellowgreen;
   padding: 15px 32px;
   text-align: center;
   font-size: 16px;
   border: none;
-  background:none;
+  background: none;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 18px;
+
+display: flex;
+align-items: center;
+text-align: center;
+color: #FFB636;
 }
 
 button[type="submit"]:hover {
   font-size: 18px;
 }
+
 button[type="button"]:hover {
-  font-size: 18px;
+  font-size: 22px;
 }
-.ButtonSection{
-    display: flex;
+
+.ButtonSection {
+  display: flex;
 }
-.imagIcon{
-    border-radius: 50%;
-    width: 25px;
-}
-.hadderIcon{
+
+.imagIcon {
   border-radius: 50%;
-  width: 40px;
+  width: 25px;
 }
+
+.hadderIcon {
+  border-radius: 50%;
+  width: 20px;
+}
+
 /* drop down list for users */
 .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-btn {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
-    font-size: 16px;
-    outline: none;
-    cursor: pointer;
-    width: fit-content;
-    text-align: left;
-    position: relative;
-  }
-  .dropdown-btn:after{
-    outline: none;
-    content: "";
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+  text-align: left;
+  position: relative;
+  width: 400px;
+  background: #FFFFFF;
+box-shadow: 0px 0px 12px rgba(25, 16, 62, 0.12);
+border-radius: 4px;
+}
+
+.dropdown-btn:after {
+  outline: none;
+  content: "";
   position: absolute;
   top: 50%;
   right: 8px;
@@ -162,37 +197,68 @@ button[type="button"]:hover {
   border-style: solid;
   border-color: #333 transparent transparent transparent;
 
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: lightgray;
-    min-width: 160px;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: blue;
-    color: white;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  .MyDatePicker {
-    cursor: pointer;
-    width: 250px;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 14px;
-    outline: none;
-  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lightgray;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.MyDatePicker {
+  cursor: pointer;
+  width: max-content;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #003B60;
+}
+.tagger{
+  font-family: 'Roboto';
+  font-weight: bolder;
+}
+
+#objective {
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  color: #003B60;
+
+}
+
+#objectiveText {
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #003B60;
+
+}
