@@ -1,3 +1,4 @@
+#Note
 # Task-Manager
 This project is a task management solution for teams, that edit, add, and delete tasks.\
 Each task is equipped with detailed information such as creator, department, start/end dates, and a comprehensive description.
